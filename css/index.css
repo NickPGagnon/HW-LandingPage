@@ -144,18 +144,7 @@ body {
     border-color: #727425;
     overflow: hidden;
     border-radius: 25px;
-    animation: wave 1s infinite;
-    transition: all 1s ease;
-    animation-direction: alternate;
     overflow: hidden;
-}
-@keyframes wave {
-    from {
-        border-radius: 25px;
-        border-style: solid
-    }
-    to  {border-radius: 20%;
-    }
 }
 @media only screen and (max-width: 1230px) {
     .pictureText {
@@ -232,7 +221,7 @@ font-weight: 300;
     width: 70%;
     background-color: #727425;
     float: left;
-    margin-top: 100px;
+    margin-top: 125px;
     margin-bottom: 100px;
     border-radius: 20px;
     margin-left: 50px;
@@ -247,6 +236,7 @@ font-weight: 300;
     background-image: url(images/mockup2.jpg);
     background-attachment: fixed;
     background-size: contain;
+    background-repeat:round;
     
 }
 .choosCard {
@@ -407,6 +397,5 @@ font-weight: 300;
     padding-bottom: 10px;
     text-align: center;
     margin-right: 5%;
-    margin-left: 
     
 }
