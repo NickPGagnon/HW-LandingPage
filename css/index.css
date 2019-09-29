@@ -144,7 +144,6 @@ body {
     border-color: #727425;
     overflow: hidden;
     border-radius: 25px;
-    overflow: hidden;
 }
 @media only screen and (max-width: 1230px) {
     .pictureText {
