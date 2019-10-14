@@ -5,12 +5,12 @@ html{
 .grid {
     display: grid;
     height: 200px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
     ". . . . ."
     "topPic topPic topPic topPic topPic"
-    ". card card card ."
+    "card card card card card"
     "choosr choosr choosr choosr choosr"
     "prof prof prof prof prof"
     ". contact contact contact ."
@@ -68,7 +68,10 @@ html{
 }
 body {
     margin: 0;
+    height: 100%;
+    min-height: 100%;
     overflow-x: hidden;
+    position: absolute;
 }
 .heroContain {
     height: 400px;
@@ -145,18 +148,46 @@ body {
     overflow: hidden;
     border-radius: 25px;
 }
-@media only screen and (max-width: 1230px) {
+@media only screen and (max-width: 1200px) {
     .pictureText {
         font-size: 13px;  
     }
+    .imageList img {
+        width: 27% !important;
+    }
+    .midCard {
+        width: 80% !important;
+    }
     .openHead {
-        display: inline;
-        font-size-adjust: auto;
-        font-size: 12px;
-        text-align: center;
-        margin-left: 6.5%;
+    }
+    .choosCard {
+        font-size: 37px !important;
+    }
+    .choosP {
+        padding: 2px !important;
+        font-size: 20px !important;
+    }
+    .profText {
+        margin-left: 20px !Important;
+    }
+    .header1  {
+        font-size: 37px !important;
+    }
+    .profText p {
+        font-size: 20px !important;
+    }
+    .nonProf {
+        width: 90% !important;
+        margin-left: 0 auto !important;
+        margin-right: 0 auto !important;
+    }
+    .choosr {
+        width: 90% !important;
+        margin-right: 0 auto !important;
+        margin-left: 0 auto !important;
     }
 }
+
 .openHead {
     font-family: open-sans, sans-serif;
     font-style: normal;
@@ -174,6 +205,7 @@ body {
     font-family: open-sans, sans-serif;
 font-style: normal;
 font-weight: 300;
+    font-size: 14px;
     color: #727425;
     text-align: left;
     text-indent: 20px;
@@ -187,8 +219,11 @@ font-weight: 300;
 }
 .midCard {
     grid-area: card;
-    height: 80%;
+    height: 375px;
     background-color: #727425;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 125px;
     margin-bottom: px;
     border-radius: 20px;
@@ -206,10 +241,12 @@ font-weight: 300;
 .imageList {
     list-style: none;
     text-align: center;
+    
 }
 .imageList img {
-    width: 25%;
+    width: 20%;
     padding: 2%;
+    
 }
 .caseCards {
     
@@ -333,22 +370,20 @@ font-weight: 300;
 }
 .contact {
     width: 100%;
-    height: 35vh;
+    height: 160px;
     grid-area: contact;
-    overflow: hidden;
+    bottom: 0;
+    position:relative;
     
     
+        
 }
 .container {
-    width: 100%;
-    height: 100%;
     background-color: #727425;
+    margin-top: auto;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: all 1s ease;
-    animation: pop 1s ease;
-    bottom 0;
 }
 .contactH {
     font-family: nunito, sans-serif;
@@ -357,7 +392,9 @@ font-weight: 300;
     color: #ffc0cb;
     padding: 20px;
     text-align: center;
-    width: 100%;
+    width: 200px;
+    margin: auto;
+    display: flex;
 }
 .link1 {
     font-family: nunito;
@@ -365,8 +402,16 @@ font-weight: 300;
     font-weight: 400;
 }
 .footerLink img {
-    width: 45%;
+    width: 75px;
     padding: 5px;
+    padding-bottom: 10px;
+}
+.footerLink {
+    width: 300px;
+    list-style: none;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
     
 }
 .email {
@@ -389,12 +434,4 @@ font-weight: 300;
 .twitter:hover  {
     box-shadow: 0px 0px 15px 10px #00aced;
     border-radius: 150%;  
-}
-.footerLink {
-    list-style: none;
-    display: flex;
-    padding-bottom: 10px;
-    text-align: center;
-    margin-right: 5%;
-    
 }
